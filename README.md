@@ -2,7 +2,31 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
 
-Please refer to [Medium Article](https://itnext.io/simple-splash-screen-for-your-angular-web-apps-and-pwas-f4fbf897540b) for more info
+This is a Simple Angular-based splash screen to use in your web apps and PWAs.
+This version has a few simple options to display the Splash Screen:
+
+- Adding it tho the `app.component.ts` file provides default behavior (slide left, 3-second loading with a 0.5-second animation):
+  
+```
+<splash-screen></splash-screen>
+<router-outlet></router-outlet>
+```
+
+- Adding values to the following properties:
+  - animationType: one of three options: SlideLeft, SlideRight or FadeOut
+  - duration: in seconds, the duration of the loading while showing
+  - animationDuration: in seconds, the duration of the sliding or fading animation.
+
+```
+<splash-screen 
+    [animationType]="'slide-left'"
+    [duration]="2"
+    [animationDuration]="0.5"
+    ></splash-screen>
+<router-outlet></router-outlet>
+```
+
+Please refer to [Medium Article](https://itnext.io/simple-splash-screen-for-your-angular-web-apps-and-pwas-f4fbf897540b) for more info.
 
 ## Development server
 
